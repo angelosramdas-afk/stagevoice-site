@@ -1,0 +1,305 @@
+<!doctype html>
+<!--
+  StageVoice marketing site. Plain HTML/CSS/JS, no build step.
+
+  Before going live, replace these placeholders (search the folder):
+    FORMSPREE_ID       -> your Formspree form ID (2 forms below), see README.md
+    YOUR-DOMAIN.com    -> your site's address (here, privacy.html, sitemap.xml,
+                          robots.txt)
+    hello@YOUR-DOMAIN.com -> your contact email (footer, privacy.html)
+    demo.mp4           -> add your demo video file next to this page
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>StageVoice: Voice Teleprompter for Speakers</title>
+    <meta
+      name="description"
+      content="StageVoice is a teleprompter app that follows your voice. Your script scrolls as you speak, holds when you ad-lib, and picks up when you return. Built for pastors, speakers, MCs and anyone on stage. On iOS and Android."
+    />
+    <link rel="canonical" href="https://angelosramdas-afk.github.io/stagevoice-site/" />
+    <meta name="theme-color" content="#0b0b0c" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Open Graph / social previews -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="StageVoice" />
+    <meta property="og:title" content="StageVoice: A teleprompter that follows your voice" />
+    <meta
+      property="og:description"
+      content="Speak naturally. Your script scrolls when you do, pauses when you ad-lib, and picks up when you return."
+    />
+    <meta property="og:url" content="https://angelosramdas-afk.github.io/stagevoice-site/" />
+    <meta property="og:image" content="https://angelosramdas-afk.github.io/stagevoice-site/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="StageVoice app icon and the headline: A teleprompter that follows your voice." />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Icons (generated from the app icon by tool/make_site_images.py) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="./" aria-label="StageVoice home">
+          <img src="assets/apple-touch-icon.png" alt="" width="32" height="32" />
+          StageVoice
+        </a>
+        <a class="header-cta" href="#join">Join the waitlist</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- 1. Hero -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container">
+          <div>
+            <h1 id="hero-title">
+              A teleprompter that <span class="highlight">follows your voice.</span>
+            </h1>
+            <p class="hero-subhead">
+              Speak naturally. Your script scrolls when you do, pauses when you
+              ad-lib, and picks up when you return. Built for pastors, speakers,
+              MCs and anyone on stage.
+            </p>
+
+            <!--
+              Waitlist form. Posts to Formspree (https://formspree.io):
+              1. Create a free Formspree account and a new form.
+              2. Copy its form ID (the part after /f/, e.g. "xyzabcde").
+              3. Replace FORMSPREE_ID below (and in the second form further
+                 down) with that ID.
+              Without JavaScript the form still works: Formspree shows its own
+              thank-you page.
+            -->
+            <form
+              class="waitlist"
+              data-waitlist
+              action="https://formspree.io/f/FORMSPREE_ID"
+              method="POST"
+              novalidate
+            >
+              <div class="waitlist-row">
+                <label class="visually-hidden" for="email-hero">Email address</label>
+                <input
+                  id="email-hero"
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  inputmode="email"
+                  placeholder="you@example.com"
+                  required
+                />
+                <button class="button" type="submit">Join the waitlist</button>
+              </div>
+              <!-- Spam trap: real people never fill this in. -->
+              <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+              <input type="hidden" name="source" value="hero" />
+              <p class="form-note">Be first to know when it launches. No spam, unsubscribe anytime.</p>
+              <p class="form-message" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <!-- Phone mockup placeholder with the animated reading guide.
+               Swap in a real screenshot later (see .phone in styles.css). -->
+          <div class="phone" role="img" aria-label="StageVoice on a phone: a welcome speech with an amber reading guide moving line by line as the speaker talks.">
+            <div class="phone-screen" aria-hidden="true">
+              <div class="script">
+                <ul class="script-lines">
+                  <li>Good morning, all!</li>
+                  <li>It's so great to see</li>
+                  <li>all of you here today.</li>
+                  <li>Welcome to Summit 26!</li>
+                  <li>Over the next two days</li>
+                  <li>you'll hear from forty</li>
+                  <li>speakers, join hands-on</li>
+                  <li>workshops, and meet</li>
+                  <li>people who share your</li>
+                  <li>love for what's next.</li>
+                  <li>So take a seat,</li>
+                  <li>silence your phones,</li>
+                  <li>and let's get started.</li>
+                </ul>
+                <span class="reading-guide"></span>
+              </div>
+              <div class="phone-status"><span class="dot"></span> Following you</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Demo -->
+      <section id="demo" class="section" aria-labelledby="demo-title">
+        <div class="container">
+          <h2 id="demo-title" class="visually-hidden">Demo</h2>
+          <div class="demo-frame">
+            <!-- Add your recording as demo.mp4 next to index.html
+                 (H.264 MP4, ~1080p, ideally under 10 MB). -->
+            <video
+              controls
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/demo-poster.jpg"
+              width="1280"
+              height="720"
+            >
+              <source src="demo.mp4" type="video/mp4" />
+              Your browser can't play this video.
+            </video>
+          </div>
+          <p class="demo-caption">
+            Watch the script keep pace with a live speaker, and hold still during an ad-lib.
+          </p>
+        </div>
+      </section>
+
+      <!-- 3. Two modes -->
+      <section class="section" aria-labelledby="modes-title">
+        <div class="container">
+          <h2 id="modes-title">Two ways to keep your place.</h2>
+          <p class="section-intro">Switch any time with one tap.</p>
+          <div class="cards">
+            <article class="card">
+              <span class="card-label">Classic</span>
+              <h3>Auto-Scroll</h3>
+              <p>The constant-speed teleprompter you know, tuned for real speaking.</p>
+              <ul>
+                <li>Adjustable speed in words per minute, even mid-speech</li>
+                <li>3-2-1 countdown before you start</li>
+                <li>Tap anywhere to pause and resume</li>
+              </ul>
+            </article>
+            <article class="card card--voice">
+              <span class="card-label">Hands-free</span>
+              <h3>Voice Tracking</h3>
+              <p>The script follows what you actually say.</p>
+              <ul>
+                <li>Scrolls as you speak, at your pace</li>
+                <li>Holds when you pause, tell a story, or ad-lib</li>
+                <li>Picks up again the moment you return to the script</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Built for the stage -->
+      <section class="section" aria-labelledby="stage-title">
+        <div class="container">
+          <h2 id="stage-title">Built for the stage.</h2>
+          <ul class="features">
+            <li>
+              <strong>Works offline</strong>
+              <span>Scripts and Auto-Scroll need no signal. Voice Tracking too, on phones with on-device speech recognition.</span>
+            </li>
+            <li>
+              <strong>Large, high-contrast text</strong>
+              <span>Readable from a music stand or a lectern.</span>
+            </li>
+            <li>
+              <strong>Dark mode</strong>
+              <span>Easy on the eyes and invisible to the back row.</span>
+            </li>
+            <li>
+              <strong>Mirror mode</strong>
+              <span>Flip the text for teleprompter glass.</span>
+            </li>
+            <li>
+              <strong>Reading guide line</strong>
+              <span>An amber band marks exactly where you are.</span>
+            </li>
+            <li>
+              <strong>Notes-style editor</strong>
+              <span>Paste or type your script; it saves as you go.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 5. Privacy -->
+      <section class="section" aria-labelledby="privacy-title">
+        <div class="container">
+          <div class="privacy-panel">
+            <h2 id="privacy-title">Your voice stays yours.</h2>
+            <p>
+              Nothing is recorded or saved, and StageVoice never sends your
+              voice anywhere. Speech recognition runs on your device when your
+              phone supports it; otherwise your phone's built-in speech service
+              handles it. No account, no ads, no tracking.
+            </p>
+            <a href="privacy.html">Read the privacy policy</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Final call to action -->
+      <section id="join" class="section final-cta" aria-labelledby="join-title">
+        <div class="container">
+          <h2 id="join-title">Step up with <span class="highlight">StageVoice.</span></h2>
+          <p class="section-intro">Coming soon to iPhone and Android. Join the waitlist to hear first.</p>
+
+          <!-- Second waitlist form: replace FORMSPREE_ID here too. -->
+          <form
+            class="waitlist"
+            data-waitlist
+            action="https://formspree.io/f/FORMSPREE_ID"
+            method="POST"
+            novalidate
+          >
+            <div class="waitlist-row">
+              <label class="visually-hidden" for="email-final">Email address</label>
+              <input
+                id="email-final"
+                type="email"
+                name="email"
+                autocomplete="email"
+                inputmode="email"
+                placeholder="you@example.com"
+                required
+              />
+              <button class="button" type="submit">Join the waitlist</button>
+            </div>
+            <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <input type="hidden" name="source" value="footer" />
+            <p class="form-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- 7. Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="mailto:hello@YOUR-DOMAIN.com">hello@YOUR-DOMAIN.com</a></li>
+          </ul>
+          <p>&copy; <span data-year>2026</span> StageVoice</p>
+        </div>
+        <div class="store-badges" aria-label="App stores: coming soon">
+          <span class="store-badge" aria-disabled="true">
+            <small>Coming soon</small>
+            <strong>App Store</strong>
+          </span>
+          <span class="store-badge" aria-disabled="true">
+            <small>Coming soon</small>
+            <strong>Google Play</strong>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

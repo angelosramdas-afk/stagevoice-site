@@ -1,0 +1,5 @@
+# Allow all crawlers. Replace YOUR-DOMAIN.com with your site's address.
+User-agent: *
+Allow: /
+
+Sitemap: https://angelosramdas-afk.github.io/stagevoice-site/sitemap.xml
