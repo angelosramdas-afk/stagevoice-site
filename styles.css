@@ -674,3 +674,43 @@ p {
     transform: translateY(calc(var(--line) * 2));
   }
 }
+
+/* ---------- Who it's for ---------- */
+.cards--four h3 {
+  margin-top: 0;
+}
+
+.cards--four p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+/* ---------- FAQ ---------- */
+.faq {
+  display: grid;
+  gap: 14px;
+  margin-top: 40px;
+}
+
+.faq-item {
+  padding: clamp(20px, 3vw, 28px);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.faq-item h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--muted);
+}
+
+@media (min-width: 760px) {
+  .faq {
+    grid-template-columns: 1fr 1fr;
+  }
+}

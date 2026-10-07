@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Replace YOUR-DOMAIN.com with your site's address. -->
+<!-- Update these addresses if the site moves to a custom domain. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://angelosramdas-afk.github.io/stagevoice-site/</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>

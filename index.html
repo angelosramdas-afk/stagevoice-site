@@ -7,7 +7,6 @@
     YOUR-DOMAIN.com    -> your site's address (here, privacy.html, sitemap.xml,
                           robots.txt)
     hello@YOUR-DOMAIN.com -> your contact email (footer, privacy.html)
-    demo.mp4           -> add your demo video file next to this page
 -->
 <html lang="en">
   <head>
@@ -16,7 +15,7 @@
     <title>StageVoice: Voice Teleprompter for Speakers</title>
     <meta
       name="description"
-      content="StageVoice is a teleprompter app that follows your voice. Your script scrolls as you speak, holds when you ad-lib, and picks up when you return. Built for pastors, speakers, MCs and anyone on stage. On iOS and Android."
+      content="StageVoice is a voice-activated teleprompter app that scrolls as you speak and waits when you ad-lib. For pastors, speakers, MCs and anyone on stage."
     />
     <link rel="canonical" href="https://angelosramdas-afk.github.io/stagevoice-site/" />
     <meta name="theme-color" content="#0b0b0c" />
@@ -40,6 +39,130 @@
     <!-- Icons (generated from the app icon by tool/make_site_images.py) -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+    <!-- Structured data. Keep the FAQ answers identical to the visible FAQ. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://angelosramdas-afk.github.io/stagevoice-site/#org",
+            "name": "StageVoice",
+            "url": "https://angelosramdas-afk.github.io/stagevoice-site/",
+            "logo": "https://angelosramdas-afk.github.io/stagevoice-site/assets/apple-touch-icon.png"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://angelosramdas-afk.github.io/stagevoice-site/#website",
+            "name": "StageVoice",
+            "url": "https://angelosramdas-afk.github.io/stagevoice-site/",
+            "publisher": {
+              "@id": "https://angelosramdas-afk.github.io/stagevoice-site/#org"
+            }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://angelosramdas-afk.github.io/stagevoice-site/#app",
+            "name": "StageVoice",
+            "operatingSystem": "iOS, Android",
+            "applicationCategory": "BusinessApplication",
+            "description": "A voice-activated teleprompter app that follows your voice: the script scrolls as you speak, holds when you ad-lib, and picks up when you return. Includes classic Auto-Scroll and a mirror mode for teleprompter glass.",
+            "url": "https://angelosramdas-afk.github.io/stagevoice-site/",
+            "image": "https://angelosramdas-afk.github.io/stagevoice-site/assets/og-image.png",
+            "publisher": {
+              "@id": "https://angelosramdas-afk.github.io/stagevoice-site/#org"
+            }
+          },
+          {
+            "@type": "VideoObject",
+            "name": "StageVoice: a teleprompter that follows your voice",
+            "description": "A 22-second demo: the script scrolls as the speaker talks, holds during an ad-lib, and picks up when they return to the script.",
+            "thumbnailUrl": "https://angelosramdas-afk.github.io/stagevoice-site/assets/demo-poster.jpg",
+            "contentUrl": "https://angelosramdas-afk.github.io/stagevoice-site/demo.mp4",
+            "uploadDate": "2026-10-07",
+            "duration": "PT22S"
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is StageVoice?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "StageVoice is a teleprompter app for iPhone and Android that follows your voice. As you read, it listens through your phone's microphone, matches the words you say to your script, and scrolls so your current line stays in the reading guide. It is built for live speaking: pastors, conference speakers, MCs and anyone on stage."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does voice tracking work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "StageVoice uses your phone's built-in speech recognition to turn what you say into words, then matches those words against your script to find your place. Because it follows your words rather than how loud you are, it moves when you read further and stays put when you pause."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if I go off script or ad-lib?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It holds your place. The status changes to “Off script · holding” and the text stays still until you come back to your script; then it picks up at the line you return to, even if you skip a few words. You can also nudge the script up or down, or drag it, at any time."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does StageVoice work offline?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Your scripts and Auto-Scroll work fully offline. Voice Tracking also works offline on phones that support on-device speech recognition. On other phones it uses the phone's built-in speech service, which may need an internet connection, and StageVoice tells you when that happens."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is my voice recorded?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. StageVoice does not record or save audio, and the app never sends your voice anywhere itself. Your phone's speech recognition turns speech into text, on the device when the phone supports it. Your scripts stay on your phone, and there is no account to create."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does it work with teleprompter glass?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Mirror mode flips the text for beam-splitter teleprompter glass. You can also adjust text size, line spacing, high contrast and where the reading guide sits on the screen."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I still use a regular scrolling teleprompter?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Auto-Scroll is the classic constant-speed mode: set a speed from 40 to 300 words per minute, change it mid-speech, start with a 3-2-1 countdown and tap to pause. Switch between Auto-Scroll and Voice Tracking with one tap."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much does StageVoice cost?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "StageVoice Pro is a monthly or yearly subscription, and both plans start with a 7-day free trial for new subscribers. Prices are shown in the App Store and Google Play in your local currency. Your scripts are never locked: if your subscription ends, you can still open, edit and copy everything you wrote."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "When is StageVoice available?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "StageVoice is coming soon to the App Store and Google Play. Join the waitlist on this page to hear when it launches."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
 
     <link rel="stylesheet" href="styles.css" />
     <script src="main.js" defer></script>
@@ -142,8 +265,9 @@
         <div class="container">
           <h2 id="demo-title" class="visually-hidden">Demo</h2>
           <div class="demo-frame">
-            <!-- Add your recording as demo.mp4 next to index.html
-                 (H.264 MP4, ~1080p, ideally under 10 MB). -->
+            <!-- demo.mp4 is the launch video (brag-output/brag.mp4 in the app repo).
+                 Replace it with a screen recording any time (H.264 MP4, ~1080p,
+                 ideally under 10 MB). -->
             <video
               controls
               muted
@@ -168,7 +292,7 @@
       <section class="section" aria-labelledby="modes-title">
         <div class="container">
           <h2 id="modes-title">Two ways to keep your place.</h2>
-          <p class="section-intro">Switch any time with one tap.</p>
+          <p class="section-intro">Classic auto-scroll or voice-activated scrolling. Switch any time with one tap.</p>
           <div class="cards">
             <article class="card">
               <span class="card-label">Classic</span>
@@ -183,7 +307,7 @@
             <article class="card card--voice">
               <span class="card-label">Hands-free</span>
               <h3>Voice Tracking</h3>
-              <p>The script follows what you actually say.</p>
+              <p>The script follows the words you actually say, not just how loud you are.</p>
               <ul>
                 <li>Scrolls as you speak, at your pace</li>
                 <li>Holds when you pause, tell a story, or ad-lib</li>
@@ -194,7 +318,33 @@
         </div>
       </section>
 
-      <!-- 4. Built for the stage -->
+      <!-- 4. Who it's for -->
+      <section id="who" class="section" aria-labelledby="who-title">
+        <div class="container">
+          <h2 id="who-title">A teleprompter for pastors, speakers and MCs.</h2>
+          <p class="section-intro">Built for people who speak live and don't always stick to the script.</p>
+          <div class="cards cards--four">
+            <article class="card">
+              <h3>Pastors</h3>
+              <p>Preach from your notes without losing your place. Tell a story or respond to the room, then return to your script, and StageVoice finds the line you come back to.</p>
+            </article>
+            <article class="card">
+              <h3>Keynote and conference speakers</h3>
+              <p>Deliver a talk at your own pace, word for word or loosely. No operator and no fixed scroll speed to keep up with.</p>
+            </article>
+            <article class="card">
+              <h3>MCs and event hosts</h3>
+              <p>Keep introductions, sponsor reads and the run of show in front of you. When the program shifts, ad-lib freely; the script waits.</p>
+            </article>
+            <article class="card">
+              <h3>Anyone on stage or camera</h3>
+              <p>Moderators, presenters, teachers and video creators: if you read from a script, StageVoice reads along with you.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Built for the stage -->
       <section class="section" aria-labelledby="stage-title">
         <div class="container">
           <h2 id="stage-title">Built for the stage.</h2>
@@ -227,7 +377,7 @@
         </div>
       </section>
 
-      <!-- 5. Privacy -->
+      <!-- 6. Privacy -->
       <section class="section" aria-labelledby="privacy-title">
         <div class="container">
           <div class="privacy-panel">
@@ -243,7 +393,52 @@
         </div>
       </section>
 
-      <!-- 6. Final call to action -->
+      <!-- 7. FAQ -->
+      <section id="faq" class="section" aria-labelledby="faq-title">
+        <div class="container">
+          <h2 id="faq-title">Questions, answered.</h2>
+          <div class="faq">
+            <div class="faq-item">
+              <h3>What is StageVoice?</h3>
+              <p>StageVoice is a teleprompter app for iPhone and Android that follows your voice. As you read, it listens through your phone's microphone, matches the words you say to your script, and scrolls so your current line stays in the reading guide. It is built for live speaking: pastors, conference speakers, MCs and anyone on stage.</p>
+            </div>
+            <div class="faq-item">
+              <h3>How does voice tracking work?</h3>
+              <p>StageVoice uses your phone's built-in speech recognition to turn what you say into words, then matches those words against your script to find your place. Because it follows your words rather than how loud you are, it moves when you read further and stays put when you pause.</p>
+            </div>
+            <div class="faq-item">
+              <h3>What happens if I go off script or ad-lib?</h3>
+              <p>It holds your place. The status changes to “Off script · holding” and the text stays still until you come back to your script; then it picks up at the line you return to, even if you skip a few words. You can also nudge the script up or down, or drag it, at any time.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Does StageVoice work offline?</h3>
+              <p>Your scripts and Auto-Scroll work fully offline. Voice Tracking also works offline on phones that support on-device speech recognition. On other phones it uses the phone's built-in speech service, which may need an internet connection, and StageVoice tells you when that happens.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Is my voice recorded?</h3>
+              <p>No. StageVoice does not record or save audio, and the app never sends your voice anywhere itself. Your phone's speech recognition turns speech into text, on the device when the phone supports it. Your scripts stay on your phone, and there is no account to create.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Does it work with teleprompter glass?</h3>
+              <p>Yes. Mirror mode flips the text for beam-splitter teleprompter glass. You can also adjust text size, line spacing, high contrast and where the reading guide sits on the screen.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Can I still use a regular scrolling teleprompter?</h3>
+              <p>Yes. Auto-Scroll is the classic constant-speed mode: set a speed from 40 to 300 words per minute, change it mid-speech, start with a 3-2-1 countdown and tap to pause. Switch between Auto-Scroll and Voice Tracking with one tap.</p>
+            </div>
+            <div class="faq-item">
+              <h3>How much does StageVoice cost?</h3>
+              <p>StageVoice Pro is a monthly or yearly subscription, and both plans start with a 7-day free trial for new subscribers. Prices are shown in the App Store and Google Play in your local currency. Your scripts are never locked: if your subscription ends, you can still open, edit and copy everything you wrote.</p>
+            </div>
+            <div class="faq-item">
+              <h3>When is StageVoice available?</h3>
+              <p>StageVoice is coming soon to the App Store and Google Play. Join the waitlist on this page to hear when it launches.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. Final call to action -->
       <section id="join" class="section final-cta" aria-labelledby="join-title">
         <div class="container">
           <h2 id="join-title">Step up with <span class="highlight">StageVoice.</span></h2>
@@ -278,7 +473,7 @@
       </section>
     </main>
 
-    <!-- 7. Footer -->
+    <!-- 9. Footer -->
     <footer class="site-footer">
       <div class="container">
         <div>
