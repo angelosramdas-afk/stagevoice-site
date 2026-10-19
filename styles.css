@@ -177,7 +177,7 @@ p {
   font-size: 0.95rem;
 }
 
-/* ---------- Buttons and waitlist form ---------- */
+/* ---------- Buttons ---------- */
 .button {
   display: inline-flex;
   align-items: center;
@@ -190,6 +190,7 @@ p {
   color: #141006;
   font: inherit;
   font-weight: 700;
+  text-decoration: none;
   cursor: pointer;
   transition: transform 0.15s ease, filter 0.15s ease;
 }
@@ -207,65 +208,22 @@ p {
   cursor: progress;
 }
 
-.waitlist {
-  max-width: 34rem;
-}
-
-.waitlist-row {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.waitlist input[type="email"] {
-  flex: 1;
-  min-height: 52px;
-  padding: 0 16px;
+.button--ghost {
   border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--surface);
+  background: transparent;
   color: var(--text);
-  font: inherit;
 }
 
-.waitlist input[type="email"]::placeholder {
-  color: #77756f;
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-.waitlist input[type="email"][aria-invalid="true"] {
-  border-color: var(--error);
-}
-
-/* Honeypot field for bots: hidden from people and screen readers. */
-.waitlist .hp {
-  position: absolute;
-  left: -9999px;
-}
-
-.form-note {
-  margin: 10px 0 0;
+.hero-note {
+  margin: 12px 0 0;
   color: var(--muted);
-  font-size: 0.85em;
-}
-
-.form-message {
-  min-height: 1.6em;
-  margin: 10px 0 0;
-  font-weight: 600;
-}
-
-.form-message.is-success {
-  color: var(--success);
-}
-
-.form-message.is-error {
-  color: var(--error);
-}
-
-@media (min-width: 560px) {
-  .waitlist-row {
-    flex-direction: row;
-  }
+  font-size: 0.9em;
 }
 
 /* ---------- Hero ---------- */
@@ -558,9 +516,9 @@ p {
   text-align: center;
 }
 
-.final-cta .waitlist {
-  margin-inline: auto;
-  text-align: left;
+.final-cta .store-badges {
+  justify-content: center;
+  margin-top: 28px;
 }
 
 .final-cta .section-intro {

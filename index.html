@@ -3,7 +3,6 @@
   StageVoice marketing site. Plain HTML/CSS/JS, no build step.
 
   Before going live, replace these placeholders (search the folder):
-    FORMSPREE_ID       -> your Formspree form ID (2 forms below), see README.md
     YOUR-DOMAIN.com    -> your site's address (here, privacy.html, sitemap.xml,
                           robots.txt)
     hello@YOUR-DOMAIN.com -> your contact email (footer, privacy.html)
@@ -155,7 +154,7 @@
                 "name": "When is StageVoice available?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "StageVoice is coming soon to the App Store and Google Play. Join the waitlist on this page to hear when it launches."
+                  "text": "StageVoice is coming soon to the App Store and Google Play."
                 }
               }
             ]
@@ -177,7 +176,7 @@
           <img src="assets/apple-touch-icon.png" alt="" width="32" height="32" />
           StageVoice
         </a>
-        <a class="header-cta" href="#join">Join the waitlist</a>
+        <a class="header-cta" href="#demo">Watch the demo</a>
       </div>
     </header>
 
@@ -195,41 +194,11 @@
               MCs and anyone on stage.
             </p>
 
-            <!--
-              Waitlist form. Posts to Formspree (https://formspree.io):
-              1. Create a free Formspree account and a new form.
-              2. Copy its form ID (the part after /f/, e.g. "xyzabcde").
-              3. Replace FORMSPREE_ID below (and in the second form further
-                 down) with that ID.
-              Without JavaScript the form still works: Formspree shows its own
-              thank-you page.
-            -->
-            <form
-              class="waitlist"
-              data-waitlist
-              action="https://formspree.io/f/FORMSPREE_ID"
-              method="POST"
-              novalidate
-            >
-              <div class="waitlist-row">
-                <label class="visually-hidden" for="email-hero">Email address</label>
-                <input
-                  id="email-hero"
-                  type="email"
-                  name="email"
-                  autocomplete="email"
-                  inputmode="email"
-                  placeholder="you@example.com"
-                  required
-                />
-                <button class="button" type="submit">Join the waitlist</button>
-              </div>
-              <!-- Spam trap: real people never fill this in. -->
-              <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
-              <input type="hidden" name="source" value="hero" />
-              <p class="form-note">Be first to know when it launches. No spam, unsubscribe anytime.</p>
-              <p class="form-message" role="status" aria-live="polite"></p>
-            </form>
+            <div class="hero-actions">
+              <a class="button" href="#demo">Watch the demo</a>
+              <a class="button button--ghost" href="#faq">Questions?</a>
+            </div>
+            <p class="hero-note">Coming soon to iPhone and Android.</p>
           </div>
 
           <!-- Phone mockup placeholder with the animated reading guide.
@@ -432,43 +401,27 @@
             </div>
             <div class="faq-item">
               <h3>When is StageVoice available?</h3>
-              <p>StageVoice is coming soon to the App Store and Google Play. Join the waitlist on this page to hear when it launches.</p>
+              <p>StageVoice is coming soon to the App Store and Google Play.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- 8. Final call to action -->
-      <section id="join" class="section final-cta" aria-labelledby="join-title">
+      <section id="get" class="section final-cta" aria-labelledby="get-title">
         <div class="container">
-          <h2 id="join-title">Step up with <span class="highlight">StageVoice.</span></h2>
-          <p class="section-intro">Coming soon to iPhone and Android. Join the waitlist to hear first.</p>
-
-          <!-- Second waitlist form: replace FORMSPREE_ID here too. -->
-          <form
-            class="waitlist"
-            data-waitlist
-            action="https://formspree.io/f/FORMSPREE_ID"
-            method="POST"
-            novalidate
-          >
-            <div class="waitlist-row">
-              <label class="visually-hidden" for="email-final">Email address</label>
-              <input
-                id="email-final"
-                type="email"
-                name="email"
-                autocomplete="email"
-                inputmode="email"
-                placeholder="you@example.com"
-                required
-              />
-              <button class="button" type="submit">Join the waitlist</button>
-            </div>
-            <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
-            <input type="hidden" name="source" value="footer" />
-            <p class="form-message" role="status" aria-live="polite"></p>
-          </form>
+          <h2 id="get-title">Step up with <span class="highlight">StageVoice.</span></h2>
+          <p class="section-intro">Coming soon to iPhone and Android.</p>
+          <div class="store-badges" aria-label="App stores: coming soon">
+            <span class="store-badge" aria-disabled="true">
+              <small>Coming soon</small>
+              <strong>App Store</strong>
+            </span>
+            <span class="store-badge" aria-disabled="true">
+              <small>Coming soon</small>
+              <strong>Google Play</strong>
+            </span>
+          </div>
         </div>
       </section>
     </main>
