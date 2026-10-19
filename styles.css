@@ -646,31 +646,60 @@ p {
 /* ---------- FAQ ---------- */
 .faq {
   display: grid;
-  gap: 14px;
+  gap: 10px;
+  max-width: 52rem;
   margin-top: 40px;
 }
 
 .faq-item {
-  padding: clamp(20px, 3vw, 28px);
   border: 1px solid var(--border);
   border-radius: 14px;
   background: var(--surface);
 }
 
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px clamp(18px, 3vw, 24px);
+  list-style: none;
+  cursor: pointer;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Plus sign that turns into a minus when open. */
+.faq-item summary::after {
+  content: "+";
+  flex: none;
+  color: var(--amber);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.faq-item[open] summary::after {
+  content: "\2212";
+}
+
+.faq-item summary:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+  border-radius: 14px;
+}
+
 .faq-item h3 {
-  margin: 0 0 8px;
-  font-size: 1.1rem;
+  margin: 0;
+  font-size: 1.05rem;
 }
 
 .faq-item p {
   margin: 0;
+  padding: 0 clamp(18px, 3vw, 24px) 20px;
   color: var(--muted);
-}
-
-@media (min-width: 760px) {
-  .faq {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media (min-width: 1040px) {
