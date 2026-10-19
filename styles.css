@@ -634,11 +634,11 @@ p {
 }
 
 /* ---------- Who it's for ---------- */
-.cards--four h3 {
+.cards--who h3 {
   margin-top: 0;
 }
 
-.cards--four p {
+.cards--who p {
   margin-bottom: 0;
   color: var(--muted);
 }
@@ -670,5 +670,11 @@ p {
 @media (min-width: 760px) {
   .faq {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1040px) {
+  .cards--who {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
