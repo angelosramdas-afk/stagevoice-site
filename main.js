@@ -1,5 +1,6 @@
 /* StageVoice site: plays the demo video (with sound when the browser allows)
-   while it is on screen, and sets the footer year. No dependencies. */
+   while it is on screen, shows the header divider on scroll, and sets the
+   footer year. No dependencies. */
 
 (() => {
   "use strict";
@@ -97,6 +98,14 @@
       onScreen = true;
       play();
     }
+  }
+
+  // Show the header's divider only once content scrolls under it.
+  const header = document.querySelector(".site-header");
+  if (header) {
+    const update = () => header.classList.toggle("is-scrolled", window.scrollY > 4);
+    window.addEventListener("scroll", update, { passive: true });
+    update();
   }
 
   // Footer year.
