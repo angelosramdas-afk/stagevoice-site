@@ -247,8 +247,6 @@
                  ideally under 10 MB). -->
             <video
               controls
-              autoplay
-              muted
               loop
               playsinline
               preload="auto"
@@ -260,6 +258,10 @@
               <source src="demo.webm" type="video/webm" />
               Your browser can't play this video.
             </video>
+            <!-- Shown when the browser only allowed muted autoplay. -->
+            <button class="sound-toggle" type="button" hidden>
+              <span aria-hidden="true">🔊</span> Tap for sound
+            </button>
           </div>
           <p class="demo-caption">
             Watch the script keep pace with the speaker, and hold still during an ad-lib.
